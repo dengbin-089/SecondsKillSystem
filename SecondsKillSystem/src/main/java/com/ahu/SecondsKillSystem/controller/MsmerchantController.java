@@ -7,7 +7,6 @@ import com.ahu.SecondsKillSystem.Serveice.MsmerchantService;
 import com.ahu.SecondsKillSystem.constant.MsmerchantVo;
 import com.ahu.SecondsKillSystem.entity.Msmerchant;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,22 +14,21 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("msmerchantAction")
-public class MsmerchantAction {
+@RequestMapping("/msmerchantAction")
+public class MsmerchantController {
 	
 	@Autowired
 	MsmerchantService msmerchantService;
 	
 
-	@RequestMapping("toadd")
+	@RequestMapping("/toadd")
 	public String toadd(){
-		return "msmerchant/add";
+		return "hello";
 	}
 	
 	@RequestMapping(value = "add")
 	public void add(Msmerchant msmerchant){
 		msmerchantService.insertMsmerchant(msmerchant);
-		System.out.println(msmerchant);
 	}
 	
 	@RequestMapping("toupdate")

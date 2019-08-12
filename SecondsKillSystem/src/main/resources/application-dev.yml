@@ -22,5 +22,7 @@ spring:
         testOnReturn: false
         poolPreparedStatements: true
         maxOpenPreparedStatements: 20
+    thymeleaf :
+      mode : HTML5
 mybatis:
   mapper-locations: classpath*:mybatis/mapper/*.xml

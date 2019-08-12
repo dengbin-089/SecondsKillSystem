@@ -17,17 +17,16 @@ public class MsmerchantService {
 	
 	public void insertMsmerchant(Msmerchant msmerchant){
 		msmerchantDao.insertMsmerchant(msmerchant);
-	};
+	}
 	public Msmerchant queryMsmerchantByid(int id){
 		return msmerchantDao.queryMsmerchantByid(id);
 	}
 	public void updateMsmerchant(Msmerchant msmerchant){
 		msmerchantDao.updateMsmerchant(msmerchant);
-	};
+	}
 	public void deleteMsmerchantbyid(int id){
 		msmerchantDao.deleteMsmerchantbyid(id);
-	};
-	
+	}
 	public List<Msmerchant> queryMsmerchantbyvo(MsmerchantVo msmerchantVo){
 		return msmerchantDao.queryMsmerchantbyvo(msmerchantVo);
 	}
